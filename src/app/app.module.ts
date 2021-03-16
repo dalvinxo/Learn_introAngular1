@@ -8,6 +8,8 @@ import { BucleComponent } from './bucle/bucle.component';
 import { SwitchComponent } from './switch/switch.component';
 import { FormularioComponent } from './proyectoTarea/formulario/formulario.component';
 import { ListaComponent } from './proyectoTarea/lista/lista.component';
+import { ListaProductoComponent } from './proyectoCaja/lista-producto/lista-producto.component';
+import { ComandaComponent } from './proyectoCaja/comanda/comanda.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ListaComponent } from './proyectoTarea/lista/lista.component';
     BucleComponent,
     SwitchComponent,
     FormularioComponent,
-    ListaComponent
+    ListaComponent,
+    ListaProductoComponent,
+    ComandaComponent
   ],
   imports: [
     BrowserModule,

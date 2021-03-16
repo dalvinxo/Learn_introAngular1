@@ -1,7 +1,6 @@
 <!-- Utilizando [ngClass] de atributos agrega y elimina una clase de una etiqueda -->
 <!-- <app-semaforo></app-semaforo> -->
 
-
 <!-- use de la directiva ngStyle de atributo -->
 
 <!-- <div>
@@ -22,7 +21,6 @@
 <input type="range" max="200" min="0" sep="2" (input)="sizeFont($event)">
 <br>
 <input type="text" [(ngModel)]="propiedadesParrafos.color"/> -->
-
 
 <!-- *ngif -->
 
@@ -51,13 +49,31 @@
 <!-- *ngSwitch -->
 <!-- <app-switch></app-switch> -->
 
-
 <!-- Proyecto Tarea -->
-<div class="contenedor">
+<!-- <div class="contenedor">
   <div class="izquierda">
     <app-formulario (tareaNueva)="nuevaTarea($event)"></app-formulario>
   </div>
   <div class="derecha">
     <app-lista [arrayTarea]="arrayTareas"></app-lista>
+  </div>
+</div> -->
+
+<!-- Proyecto Caja registradora -->
+<h3>Caja Registradora</h3>
+<div class="contenedor-r">
+  <div class="izquierda-r">
+    <app-lista-producto
+      titulo="Comida"
+      [arrayProducto]="array_Comida"
+      (productoSeleccionado)="seleccionados($event)"
+    ></app-lista-producto>
+    <app-lista-producto
+      titulo="Bebida"
+      [arrayProducto]="array_Bebida"
+    ></app-lista-producto>
+  </div>
+  <div class="derecha-r">
+    <app-comanda [listaProducto]="array_seleccionado"></app-comanda>
   </div>
 </div>

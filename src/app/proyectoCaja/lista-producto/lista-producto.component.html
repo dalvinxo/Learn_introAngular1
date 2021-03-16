@@ -1,0 +1,9 @@
+<h3>{{titulo}}</h3>
+<div class="productos">
+    <div class="producto" *ngFor="let p of arrayProducto" (click)="producto(p)">
+        <img [src]="p.imagenUrl">
+        <p>{{p.nombreProducto}}</p>
+        <p>{{p.precioProducto}} $</p>
+    </div>
+
+</div>

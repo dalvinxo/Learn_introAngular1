@@ -1,0 +1,7 @@
+<h3>Caja</h3>
+<div class="productos">
+    <p>Total: {{sumaTotal()}}</p>
+    <div class="producto" *ngFor="let pt of listaProducto; let indice=index" (click)="borrar(indice)">
+        <p>{{pt.nombreProducto}} x{{pt.cantidad}} = {{pt.precioProducto}}</p>
+    </div>
+</div>
