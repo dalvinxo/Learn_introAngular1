@@ -1,0 +1,13 @@
+<div [ngSwitch]="valor">
+    <p *ngSwitchCase="1">Opción numero 1</p>
+    <p *ngSwitchCase="2">Opción numero 2</p>
+    <p *ngSwitchCase="3">Opción numero 3</p>
+    <p *ngSwitchDefault>Fin!!</p>
+</div>
+
+<div [ngSwitch]="valorString">
+    <p *ngSwitchCase="'uno'">Numero 1</p>
+    <p *ngSwitchCase="'dos'">This is number 2</p>
+    <p *ngSwitchCase="'tres'">This is number 3</p>
+    <p *ngSwitchDefault>Fin</p>
+</div>

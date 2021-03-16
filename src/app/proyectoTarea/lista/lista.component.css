@@ -1,0 +1,20 @@
+.tarea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarea .tareas{
+    border: 1px solid black;
+    margin: 5px;
+    width: 40%;
+    padding: 10px;
+}
+
+.completa{
+    background-color: lightgreen;
+}
+
+.incompleta{
+    background-color: #e52951;
+}

@@ -1,0 +1,10 @@
+<div class="tarea">
+
+    <div class="tareas" *ngFor="let t of arrayTarea; let indice = index" [ngClass]="{ completa: t.complete, incompleta: !t.complete}">
+        <h3>{{t.title}}</h3>
+        <h4>{{t.description}}</h4>
+        <button (click)="borrar(indice)">Borrar</button>
+        <button (click)="completar(t)">{{t.complete ? 'Complete':'Incomplete'}}</button>
+    </div>
+
+</div>

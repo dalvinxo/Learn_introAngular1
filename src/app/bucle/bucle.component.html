@@ -1,0 +1,29 @@
+<button (click)="agregar()">Añadir nueva persona</button>
+
+<div class="personas">
+    <div class="persona" *ngFor="let pers of personas">
+        <h1>{{pers.nombre}}</h1>
+        <h2>{{pers.apellido}}</h2>
+        <p>{{pers.edad}}</p>
+        <p>{{pers.pais}}</p>
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>País</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of personas">
+            <td>{{p.nombre}}</td>
+            <td>{{p.apellido}}</td>
+            <td>{{p.edad}}</td>
+            <td>{{p.pais}}</td>
+        </tr>
+    </tbody>
+</table>
