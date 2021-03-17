@@ -1,0 +1,16 @@
+.formulario-departamento{
+    width: 300px;
+    
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.form-group label{
+    margin-bottom: 10px;
+}

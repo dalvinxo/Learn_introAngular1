@@ -10,6 +10,9 @@ import { FormularioComponent } from './proyectoTarea/formulario/formulario.compo
 import { ListaComponent } from './proyectoTarea/lista/lista.component';
 import { ListaProductoComponent } from './proyectoCaja/lista-producto/lista-producto.component';
 import { ComandaComponent } from './proyectoCaja/comanda/comanda.component';
+import { FormularioDepartamentoComponent } from './proyectoProducto/formulario-departamento/formulario-departamento.component';
+import { ListaDepartamentoComponent } from './proyectoProducto/lista-departamento/lista-departamento.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { ComandaComponent } from './proyectoCaja/comanda/comanda.component';
     FormularioComponent,
     ListaComponent,
     ListaProductoComponent,
-    ComandaComponent
+    ComandaComponent,
+    FormularioDepartamentoComponent,
+    ListaDepartamentoComponent
   ],
   imports: [
     BrowserModule,

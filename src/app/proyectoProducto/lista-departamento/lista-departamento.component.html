@@ -1,0 +1,11 @@
+<div class="lista">
+    <div class="departamentos" *ngFor="let p of array_listaDepartamento; let indice = index">
+        <h3>{{p.nombre}}</h3>
+        <div>
+            <p>Cantidad: {{p.cantidad}}</p>
+            <p>{{p.departamento}}</p>    
+        </div>
+        <button (click)="comprar(indice)">{{boton_nombre}}</button>
+
+      </div>
+</div>

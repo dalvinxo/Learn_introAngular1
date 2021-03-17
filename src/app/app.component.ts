@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Producto } from './proyectoCaja/Module/Producto..component';
+import { DepartamentoProducto } from './proyectoProducto/Module/Departamento.component';
 import { Tarea } from './proyectoTarea/Module/Tarea.component';
 
 @Component({
@@ -20,8 +21,15 @@ export class AppComponent {
   array_Bebida: Array<Producto>;
   array_seleccionado: Array<Producto>;
 
+  //proyecto Proyecto departamento
+  array_departamentoLista: Array<DepartamentoProducto>;
+  array_departamentoComprado: Array<DepartamentoProducto>;
+
 
   constructor(){
+    this.array_departamentoLista = [];
+    this.array_departamentoComprado =[];
+
     this.propiedadesParrafos = {
       color: 'red',
       fontSize: '20px'
@@ -95,5 +103,21 @@ export class AppComponent {
 
   }
 
+  //proyecto Producto 2
+  newDepartamento(event){
+    this.array_departamentoLista.push(event);
+  }
+
+  comprado(indice){
+    const el = this.array_departamentoLista.splice(indice, 1);
+    this.array_departamentoComprado.push(el[0]);
+  }
+
+  Eliminar(indice){
+    const el = this.array_departamentoComprado.splice(indice, 1);
+    this.array_departamentoLista.push(el[0]);
+  }
+  
+  
 
 }

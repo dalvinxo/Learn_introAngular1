@@ -1,0 +1,24 @@
+.lista{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.departamentos{
+    border: 1px solid black;
+    width: 300px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+
+.departamentos div p:first-child{
+    float: left;
+}
+
+.departamentos div p:last-child{
+    float: right;
+
+}

@@ -1,0 +1,22 @@
+<div class="fomulario-departamento">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" [(ngModel)]="productoDepartamento.nombre">
+    </div>
+    <div class="form-group">
+        <label>Cantidad: {{productoDepartamento.cantidad}}</label>
+        <input type="range" max="10" min="1" sep="1" [(ngModel)]="productoDepartamento.cantidad">
+    </div>
+    <div class="form-group">
+        <label>Departamento</label>
+        <select [(ngModel)]="productoDepartamento.departamento">
+            <option value="Panaderia">Panadería</option>
+            <option value="Ganaderia">Ganaderia</option>
+            <option value="Veterinario">Veterinaria</option>
+            <option value="Dulceria">Dulceria</option>
+            <option value="Inmuebles">Inmuebles</option>
+        </select>
+    </div>
+    <button (click)="onNewDepartamento()">Enviar</button>
+
+</div>
