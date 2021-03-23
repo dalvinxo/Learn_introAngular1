@@ -1,94 +1,19 @@
-<!-- Utilizando [ngClass] de atributos agrega y elimina una clase de una etiqueda -->
-<!-- <app-semaforo></app-semaforo> -->
-
-<!-- use de la directiva ngStyle de atributo -->
-
-<!-- <div>
-  <p [ngStyle]="propiedadesParrafos">
-    he Battle of Halmyros was fought on 15 March 1311 between the Frankish Duchy
-    of Athens and the Catalan Company (seal depicted). The Catalans were
-    mercenaries hired by the Byzantine emperor to combat the increasing power of
-    the Turks in Anatolia. After the Byzantines murdered the Catalan leader,
-    Roger de Flor, the company crossed the southern Balkans and arrived in
-    southern Greece in 1309.
-  </p>
-<div>
-  <button (click)="cambiarColor('r')">Rojo</button>
-  <button (click)="cambiarColor('v')">Verde</button>
-  <button (click)="cambiarColor('a')">Amarrillo</button>
-  <button (click)="cambiarColor('b')">Azul</button>
-</div>
-<input type="range" max="200" min="0" sep="2" (input)="sizeFont($event)">
-<br>
-<input type="text" [(ngModel)]="propiedadesParrafos.color"/> -->
-
-<!-- *ngif -->
-
-<!-- <p *ngIf="mostrar; then noFalso else esFalso"></p>
-<ng-template #esFalso>
-  <p>Contenido dentro del ng-template</p>
-</ng-template>
-<ng-template #noFalso>
-  <p>Contenido que es verdadero</p>
-</ng-template>
-
-<p *ngIf="mostrar">
-  El contenido es verdadero
-</p>
-<p *ngIf="!mostrar">
-  El contenido es falso
-</p>
-
-
-<button (click)="mostrars()">Mostrar/ ocultar</button> -->
-
-<!-- *ngFor -->
-
-<!-- <app-bucle></app-bucle> -->
-
-<!-- *ngSwitch -->
-<!-- <app-switch></app-switch> -->
-
-<!-- Proyecto Tarea -->
-<!-- <div class="contenedor">
-  <div class="izquierda">
-    <app-formulario (tareaNueva)="nuevaTarea($event)"></app-formulario>
-  </div>
-  <div class="derecha">
-    <app-lista [arrayTarea]="arrayTareas"></app-lista>
-  </div>
-</div> -->
-
-<!-- Proyecto Caja registradora -->
-<!-- <h3>Caja Registradora</h3>
-<div class="contenedor-r">
-  <div class="izquierda-r">
-    <app-lista-producto
-      titulo="Comida"
-      [arrayProducto]="array_Comida"
-      (productoSeleccionado)="seleccionados($event)"
-    ></app-lista-producto>
-    <app-lista-producto
-      titulo="Bebida"
-      [arrayProducto]="array_Bebida"
-    ></app-lista-producto>
-  </div>
-  <div class="derecha-r">
-    <app-comanda [listaProducto]="array_seleccionado"></app-comanda>
-  </div>
-</div> -->
-
-<!-- Proyecto Producto -->
-<div class="contenedor-t">
-  <div class="row-t">
-    <app-formulario-departamento (nuevoDepartamento)="newDepartamento($event)"></app-formulario-departamento>
-  </div>
-  <div class="row-lista-t">
-    <div class="izquierda-t">
-    <app-lista-departamento [array_listaDepartamento]="array_departamentoLista" (indice)="comprado($event)" boton_nombre="Comprar" ></app-lista-departamento>
-  </div>
-    <div class="derecha-t">
-      <app-lista-departamento [array_listaDepartamento]="array_departamentoComprado" boton_nombre="Eliminar" (indice)="Eliminar($event)"></app-lista-departamento>
+<div class="container">
+    <h1>Lista Personajes</h1>
+    <h3>Total: {{paginaTotal}}</h3>
+    <h3>Pagina: {{paginaCambiante}}</h3>
+    <div class="botones">
+        <button class="btn btn-primary" [disabled]="(paginaCambiante==1)" (click)="onChange(false)">Anterior</button>
+        <button class="btn btn-primary" [disabled]="(paginaCambiante==paginaTotal)" (click)="onChange(true)">Siguiente</button>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3" *ngFor="let personajes of arrayCharacters">
+            <div class="personaje" [ngClass]="{vivo: (personajes.status=='Alive'), muerto:((personajes.status=='Dead'))}">
+                <h3>{{personajes.name}}</h3>
+                <img [src]="personajes.image" alt="">
+                <p>{{personajes.species}}</p>
+            </div>
+        </div>
+    </div>
 </div>
+

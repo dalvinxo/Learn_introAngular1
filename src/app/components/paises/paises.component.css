@@ -1,0 +1,17 @@
+.paises{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.pais{
+    border: 1px solid black;
+    margin: 10px;
+    width: 200px;
+    padding: 20px;
+    
+}
+
+.pais img{
+    width: 100%;
+}

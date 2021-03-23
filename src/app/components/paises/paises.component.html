@@ -1,0 +1,8 @@
+<div class="paises">
+    <div class="pais" *ngFor="let pais of array_paises">
+      <h4>pais: {{pais.translations['es']}}</h4>
+      <h5>Capital: {{pais.capital}}</h5>
+      <img [src]="pais.flag" >
+      
+    </div>
+  </div>
