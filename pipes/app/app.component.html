@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3>pipe personalizado reverso:</h3>
+      <h4>texto normal: <p>{{texto}}</p></h4>
+      <h4>texto reverso: <p>{{texto | reverso}}</p></h4>
+    </div>
+
+    <div class="col-12">
+      <h3>pipe personalizado capitalize:</h3>
+      <h4>texto normal: <p>{{texto}}</p></h4>
+      <h4>texto reverso: <p>{{texto | capitalize}}</p></h4>
+    </div>
+
+    <div class="col-6">
+      <h3>pipe currency: {{dinero | currency:'DOP':'symbol':'1.1-1'}}</h3>
+    </div>
+    <div class="col-6">
+      <h3>pipe decimal: {{dinero | number:'1.2-3'}}</h3>
+    </div>
+
+    <div class="col-6">
+      <h3>pipe date: {{fecha | date:'dd / MM / yyyy HH:mm:ss'}}</h3>
+    </div>
+
+    <div class="col-6">
+      <h3>pipe percent: {{ porcentaje | percent:'1.2-2'}}</h3>
+    </div>
+
+    <div class="col-6">
+      <h2>pipe uppercase {{ texto | uppercase}}</h2>
+      <br>
+      <h2>pipe lower {{ texto | lowercase}}</h2>
+      <br>
+      <h2>pipe title {{ texto | titlecase}}</h2>
+      <br>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="semaforo" [@cambiarColor]="'verde'"></div>
+  </div>
+</div>

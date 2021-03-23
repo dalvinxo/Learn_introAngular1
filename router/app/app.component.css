@@ -1,0 +1,13 @@
+.et-a{
+    display: flex;
+    flex-direction: column;
+}
+
+.et-a a{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.activado{
+    color: aqua;
+}
