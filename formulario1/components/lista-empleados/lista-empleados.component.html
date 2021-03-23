@@ -1,0 +1,8 @@
+<div class="empleados">
+    <div class="empleado" *ngFor="let empleado of listaEmpleado">
+        <h3>{{empleado.nombre}}</h3>
+        <img [src]="empleado.imagen">
+        <p>pais: {{empleado.pais}}</p>
+        <p>edad: {{empleado.edad}}</p>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.empleados{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.empleado{
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid dodgerblue;
+}
+
+.empleado img{
+    width: 100%;
+}
